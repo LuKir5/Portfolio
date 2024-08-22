@@ -1605,8 +1605,6 @@ ul li {
   padding-left: 0.4rem;
 }
 
-
-
 ul ul,
 ul ol,
 ol ol,
@@ -3778,8 +3776,7 @@ td:last-child {
 }
 
 .s-projects-card-title:hover,
-.s-projects-card-title:focus
- {
+.s-projects-card-title:focus {
   text-decoration: underline;
   transform: scale(0.95);
   transition: all 0.4s;
@@ -3942,11 +3939,71 @@ td:last-child {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 10px;
-  background-color: rgb(140,145,190);
+  background-color: rgb(140, 145, 190);
 }
 
 .badge-php:hover {
   background-color: rgb(140, 145, 190, 0.5);
+  color: var(--color-3-dark);
+  transform: scale(0.9);
+}
+
+.badge-vue {
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-3-dark);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 10px;
+  background-color: rgb(66, 184, 131);
+}
+
+.badge-vue:hover {
+  background-color: rgb(66, 184, 131, 0.5);
+  color: var(--color-3-dark);
+  transform: scale(0.9);
+}
+
+.badge-node {
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-3-dark);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 10px;
+  background-color: rgb(33, 87, 50);
+}
+
+.badge-node:hover {
+  background-color: rgb(33, 87, 50, 0.5);
+  color: var(--color-3-dark);
+  transform: scale(0.9);
+}
+
+.badge-nuxt {
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-3-dark);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 10px;
+  background-color: rgb(53, 73, 94);
+}
+
+.badge-nuxt:hover {
+  background-color: rgb(53, 73, 94, 0.5);
   color: var(--color-3-dark);
   transform: scale(0.9);
 }
@@ -3988,7 +4045,7 @@ td:last-child {
   grid-row: auto;
 }
 
-.s-contact form label{
+.s-contact form label {
   color: var(--color-3);
 }
 
@@ -4194,7 +4251,7 @@ td:last-child {
  * ## go top
  * ------------------------------------------------------------------- */
 .ss-go-top {
-  margin-top: 4rem ;
+  margin-top: 4rem;
 }
 
 .ss-go-top a {
