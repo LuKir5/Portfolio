@@ -3326,7 +3326,7 @@ td:last-child {
 }
 
 .s-intro__content-pretitle {
-  margin-bottom: var(--vspace-0_125);
+  margin-bottom: var(--vspace-0_875);
   padding-left: 10rem;
   color: var(--color-3);
   transform: translate(-9.6rem, 0);
