@@ -3754,7 +3754,7 @@ td:last-child {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: var(--color-2-light);
+  background-color: var(--color-2);
   background-clip: border-box;
   border-radius: 10px;
   box-shadow: 0.5em 0.5em 1em 0.2em var(--color-2-lightest);
