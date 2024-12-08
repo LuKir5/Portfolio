@@ -1,0 +1,24 @@
+$navbar-brand-font-size: 2.25rem;
+$navbar-light-brand-color: var(--color-1);
+$navbar-light-brand-hover-color: var(--color-3);
+$navbar-padding-y: 0;
+$navbar-light-color: var(--color-1);
+$navbar-light-hover-color: var(--color-3); 
+$navbar-light-active-color: var(--color-1);
+$navbar-light-disabled-color: var(--color-3);
+$nav-link-color: var(--color-1);
+$nav-link-hover-color: var(--color-3);
+$nav-link-disabled-color: var(--color-3);
+$nav-link-font-size: 1.25rem;
+$body-bg: var(--color-2);
+$body-color: var(--color-1);
+$link-color: var(--color-1); 
+$link-hover-color: var(--color-4); 
+$navbar-light-icon-color: var(--color-1);
+$navbar-light-toggler-border-color: none;
+$navbar-toggler-focus-width: 0;
+$container-padding-x: 0;
+$border-color: var(--color-1);
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
