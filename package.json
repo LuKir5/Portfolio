@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
+    "aos": "^2.3.4",
     "bootstrap": "^5.3.3"
   }
 }
