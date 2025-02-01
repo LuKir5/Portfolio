@@ -841,7 +841,7 @@ a.footer-link {
   color: var(--color-2);
   background-color: var(--color-1);
   margin: 0;
-  padding: 2rem;
+  padding: 0;
 }
 
 #datenschutz-container {
@@ -851,6 +851,14 @@ a.footer-link {
   flex-direction: column;
 }
 
+#datenschutz-container h3 {
+  margin-top: 2rem;
+}
+
+#datenschutz-container p {
+  font-size: 1rem;
+}
+
 .datenschutz-title {
   font-weight: 500;
   margin: 0;
@@ -858,10 +866,6 @@ a.footer-link {
   padding: 2rem 0;
   width: fit-content;
   text-shadow: var(--color-2) 1px 0 3px;
-}
-
-p > #datenschutz-container {
-  font-size: 1rem;
 }
 
 #datenschutz-page .page-container #footer-container {
