@@ -7,8 +7,9 @@
  *    ## HTML & Body
  *    ## Text Elements
  *    ## Links
- * # PAGE CONTAINER
+ *    ## Styling Elements
  *    ## Lines
+ * # PAGE CONTAINERS AND SECTION ELEMENTS
  * # HEADER & NAVIGATION
  * # HERO SECTION
  * # ABOUT SECTION
@@ -24,11 +25,7 @@
  *    ## Datenschutz Media Queries
  *    ## Lines Media Queries
  * # ANIMATIONS
- *    ## Animation Fade In der Website
- *    ## Animation Hero-Titel
- *    ## Einblendung Pagecontainer
- *    ## Animation Fade In der Textblöcke
- *    ## Line Animation linke Seite
+ *    ## Line Animation
  * ------------------------------------------------------------------ */
 
 /* ===================================================================
@@ -192,12 +189,17 @@
 :root {
   --color-1: hsl(0, 0%, 95%); /*	#f2f2f2 */
   --color-2: hsl(270, 100%, 2%); /* #05000A */
-  --color-3: hsla(0, 0%, 95%, 0.5); /* für Navigation Links */
+  --color-3: hsla(
+    0,
+    0%,
+    95%,
+    0.5
+  ); /* #f2f2f2 mit Opacity 0.5, für Navigation Links */
   --color-4: hsl(270, 100%, 2%, 0.5); /* für normale Links */
   --color-5: hsla(250, 20%, 60%, 0.2); /* Background for line-Animation */
-  --blend-factor: 0;
   --color-6: hsl(270, 100%, 25%); /*  	#400080, Accent Color */
-  --color-7: hsla(0, 0%, 95%, 0.15); /* für Project Elevation */
+  --color-7: hsla(0, 0%, 95%, 0.15); /* für Elevation von Projektimages */
+  --blend-factor: 0;
 }
 
 /* ------------------------------------------------------------------- 
@@ -221,11 +223,6 @@ body {
 body {
   color: var(--color-2);
   background-color: var(--color-1);
-  animation: WebsiteFadeIn 2.5s;
-}
-
-.elevation {
-  box-shadow: 6px 8px 25px 0px rgba(0, 0, 0, 0.5);
 }
 
 /* ------------------------------------------------------------------- 
@@ -318,126 +315,12 @@ a.nav-link:after {
   width: 90px;
 }
 
-/* ===================================================================
- * # PAGE CONTAINERS
- *
- *
- * ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- 
+* ## Styling Elements
+* ------------------------------------------------------------------- */
 
-.page-container {
-  width: 100%;
-  position: relative;
-  min-height: 100vh;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-#first-page {
-  width: 100%;
-  position: relative;
-  min-height: 100vh;
-  margin: 0;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.first-page-background {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  background-image: url("/assets/svg/shiny-overlay-white.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -2;
-}
-
-#second-page {
-  width: 100%;
-  margin: 0;
-  padding: 2rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-#third-page {
-  width: 100%;
-  margin: 0;
-  padding: 2rem 0 5rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  overflow: hidden;
-}
-
-.third-page-background {
-  width: 100vw;
-  height: 100%;
-  position: absolute;
-  bottom: 8rem;
-  left: 0;
-  background-image: url(../assets/svg/third-page-background.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-
-@media screen and (min-width: 740px) {
-  .third-page-background {
-    bottom: 10rem;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .third-page-background {
-    bottom: 11.5rem;
-  }
-}
-
-@media screen and (min-width: 2800px) {
-  .third-page-background {
-    bottom: 12rem;
-  }
-}
-
-@media screen and (min-width: 3200px) {
-  .third-page-background {
-    bottom: 18rem;
-  }
-}
-
-#fourth-page {
-  width: 100%;
-  margin: 0;
-  padding: 2rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.section-title {
-  font-weight: 500;
-  margin: 0;
-  font-size: 2rem;
-  padding: 0 0 2rem 0;
-  width: fit-content;
-  /* text-shadow: var(--color-2) 1px 0 3px; */
-}
-
-.section-pretitle {
-  font-size: 1.3rem;
-  color: var(--color-6);
-  padding: 0;
-  margin: 0;
+.elevation {
+  box-shadow: 6px 8px 25px 0px rgba(0, 0, 0, 0.5);
 }
 
 /* ------------------------------------------------------------------- 
@@ -506,6 +389,103 @@ a.nav-link:after {
 }
 
 /* ===================================================================
+ * # PAGE CONTAINERS AND SECTION ELEMENTS
+ *
+ *
+ * ------------------------------------------------------------------- */
+
+.page-container {
+  width: 100%;
+  position: relative;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#first-page {
+  width: 100%;
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.first-page-background {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-image: url("/assets/svg/hero-background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+}
+
+#second-page {
+  width: 100%;
+  margin: 0;
+  padding: 2rem 0 5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#third-page {
+  width: 100%;
+  margin: 0;
+  padding: 2rem 0 5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.third-page-background {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  bottom: 8rem;
+  left: 0;
+  background-image: url(../assets/svg/third-page-background.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+#fourth-page {
+  width: 100%;
+  margin: 0;
+  padding: 2rem 0 5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section-title {
+  font-weight: 500;
+  margin: 0;
+  font-size: 2rem;
+  padding: 0 0 2rem 0;
+  width: fit-content;
+}
+
+.section-pretitle {
+  font-size: 1.3rem;
+  color: var(--color-6);
+  padding: 0;
+  margin: 0;
+}
+
+/* ===================================================================
  * # HEADER & NAVIGATION
  *
  *
@@ -521,44 +501,6 @@ a.nav-link:after {
 .navbar {
   width: 100%;
 }
-
-/* #navbar-brand {
-  margin: 0;
-  font-size: 3.5rem;
-  transition: transform 0.3s;
-} */
-
-/* #navbar-brand:hover {
-  transform: scale(0.9);
-} */
-
-/* .navbar-brand-firstword {
-  position: relative;
-  bottom: 0.5rem;
-  font-weight: 400;
-  font-style: italic;
-  background-image: linear-gradient(var(--color-1), var(--color-2));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.navbar-brand-secondword {
-  position: relative;
-  top: 0.5rem;
-  right: 0.62rem;
-  font-weight: 400;
-  font-style: italic;
-
-  background-image: linear-gradient(var(--color-2), var(--color-1));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-} */
-
-/* #navbar-nav {
-  align-items: flex-end;
-} */
 
 #container-fluid {
   padding: 0;
@@ -583,7 +525,7 @@ button.navbar-toggler {
 }
 
 .hero-horizontal-rule {
-  color: var(--color-1);
+  color: var(--color-3);
   border-top-width: 2px;
   border-radius: 10px;
 }
@@ -804,21 +746,6 @@ p.third-about-text {
   padding-bottom: 2rem;
 }
 
-/* .contact-title {
-  font-weight: 500;
-  margin: 0;
-  font-size: 2.5rem;
-  padding: 2rem 0;
-  width: fit-content;
-  text-shadow: var(--color-2) 1px 0 3px;
-} */
-
-/* .first-contact-text {
-  font-size: 1.5rem;
-  padding-left: 2px;
-  margin: 2rem 0 1rem 0;
-} */
-
 .first-contact-text {
   margin: 1rem 0;
   padding-left: 2px;
@@ -857,10 +784,6 @@ p.third-about-text {
   align-items: center;
   padding: 3rem 2rem 1rem 2rem;
   background-color: var(--color-2);
-  background-image: url("/assets/svg/shiny-overlay.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .footer-credits {
@@ -919,11 +842,6 @@ a.footer-link {
   background-color: var(--color-1);
   margin: 0;
   padding: 2rem;
-  /* background-image: url("/assets/svg/shiny-overlay-white.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; */
-  animation: WebsiteFadeIn 2.5s;
 }
 
 #datenschutz-container {
@@ -970,6 +888,12 @@ p > #datenschutz-container {
  * ## Page Containers Media Queries
  * ------------------------------------------------------------------- */
 
+@media screen and (min-width: 740px) {
+  .third-page-background {
+    bottom: 10rem;
+  }
+}
+
 @media screen and (min-width: 992px) {
   #first-page {
     align-items: center;
@@ -981,6 +905,10 @@ p > #datenschutz-container {
 
   #third-page {
     align-items: center;
+  }
+
+  .third-page-background {
+    bottom: 11.5rem;
   }
 
   #fourth-page {
@@ -1003,6 +931,18 @@ p > #datenschutz-container {
 
   .section-title {
     font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 2800px) {
+  .third-page-background {
+    bottom: 12rem;
+  }
+}
+
+@media screen and (min-width: 3200px) {
+  .third-page-background {
+    bottom: 18rem;
   }
 }
 
@@ -1032,13 +972,6 @@ p > #datenschutz-container {
 }
 
 @media screen and (min-width: 992px) {
-  /* #navbar-brand {
-    width: 8rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  } */
-
   #navbar-nav {
     display: flex;
     flex-direction: column;
@@ -1070,12 +1003,6 @@ p > #datenschutz-container {
     width: 100%;
     left: 0;
   }
-}
-
-@media screen and (max-width: 992px) {
-}
-
-@media screen and (max-width: 576px) {
 }
 
 @media screen and (min-width: 3200px) {
@@ -1152,11 +1079,6 @@ p > #datenschutz-container {
     width: 70%;
   }
 
-  /* p.first-about-text {
-    margin: 2rem 0;
-    font-size: 2rem;
-  } */
-
   p.first-about-text {
     width: 65%;
     align-self: start;
@@ -1179,20 +1101,6 @@ p > #datenschutz-container {
     margin: 2rem 0;
     font-size: 1.3rem;
   }
-
-  /* div.fifth-about-text {
-    width: 65%;
-    align-self: end;
-    margin: 2rem 0;
-    font-size: 1.5rem;
-  } */
-
-  /* .experience-title {
-    width: 60%;
-    align-self: center;
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
-  } */
 }
 
 /* ===================================================================
@@ -1309,140 +1217,7 @@ p > #datenschutz-container {
  * ------------------------------------------------------------------- */
 
 /* ------------------------------------------------------------------- 
-* ## Animation Fade In der Website
-* ------------------------------------------------------------------- */
-
-@keyframes WebsiteFadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes WebsiteFadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@-moz-keyframes WebsiteFadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ------------------------------------------------------------------- 
-* ## Animation Hero-Titel
-* ------------------------------------------------------------------- */
-
-@keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    opacity: 1;
-  }
-}
-
-@-moz-keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    opacity: 1;
-  }
-}
-
-/* ------------------------------------------------------------------- 
-* ## Einblendung Pagecontainer
-* ------------------------------------------------------------------- */
-
-.blendIn {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* ------------------------------------------------------------------- 
-* ## Animation Fade In der Textblöcke
-* ------------------------------------------------------------------- */
-
-/* @keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-} */
-
-/* .visible {
-  animation: fadeIn 1s ease-out 1s forwards;
-} */
-
-/* ------------------------------------------------------------------- 
-* ## Line Animation linke Seite
+* ## Line Animation
 * ------------------------------------------------------------------- */
 
 @keyframes drop {
