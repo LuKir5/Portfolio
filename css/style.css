@@ -199,6 +199,7 @@
   --color-5: hsla(250, 20%, 60%, 0.2); /* Background for line-Animation */
   --color-6: hsl(270, 100%, 25%); /*  	#400080, Accent Color */
   --color-7: hsla(0, 0%, 95%, 0.15); /* für Elevation von Projektimages */
+  --color-8: hsl(270, 50%, 20%); /* für box-shadow von Projektcontainern */
   --blend-factor: 0;
 }
 
@@ -441,7 +442,7 @@ a.nav-link:after {
 #third-page {
   width: 100%;
   margin: 0;
-  padding: 2rem 0 5rem 0;
+  padding: 2rem 0 10rem 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -549,7 +550,7 @@ button.navbar-toggler {
   line-height: 4rem;
   color: var(--color-1);
   word-break: break-word;
-  text-shadow: var(--color-1) 1px 0 20px;
+  letter-spacing: 0.5rem;
 }
 
 .hero-text {
@@ -678,24 +679,34 @@ p.third-about-text {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-bottom: 8rem;
-  gap: 1rem;
+  margin-bottom: 8rem;
+  padding: 1.5rem;
+  gap: 2rem;
+  box-shadow: 0px 0px 0px 1px var(--color-8);
+  border-radius: 10px;
 }
 
 .project-item-one {
-  box-shadow: 4px 6px 20px 0px var(--color-7);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-img {
+  width: 100%;
+  max-width: 500px;
 }
 
 .project-item-two {
-  width: 80%;
+  width: 100%;
 }
 
 .caption-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding-bottom: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--color-1);
-  line-height: 1.2rem;
 }
 
 .caption-text {
@@ -846,6 +857,7 @@ a.footer-link {
 
 #datenschutz-container {
   width: 100%;
+  padding-bottom: 2rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -912,7 +924,7 @@ a.footer-link {
   }
 
   .third-page-background {
-    bottom: 11.5rem;
+    bottom: 12.5rem;
   }
 
   #fourth-page {
@@ -936,12 +948,13 @@ a.footer-link {
   .section-title {
     font-size: 3rem;
   }
+
+  .third-page-background {
+    bottom: 14rem;
+  }
 }
 
 @media screen and (min-width: 2800px) {
-  .third-page-background {
-    bottom: 12rem;
-  }
 }
 
 @media screen and (min-width: 3200px) {
@@ -1141,7 +1154,6 @@ a.footer-link {
 
   .project-item-one {
     width: 50%;
-    margin-right: 3rem;
   }
 
   .project-item-two {
@@ -1149,6 +1161,22 @@ a.footer-link {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .project-container {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 2200px) {
+  .project-item-one {
+    padding: 4rem;
+  }
+
+  .project-img {
+    max-width: 700px;
   }
 }
 
